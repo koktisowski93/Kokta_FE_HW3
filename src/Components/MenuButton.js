@@ -1,16 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './MenuButton.css';
 
-const MenuButton = ({ name, icon: Icon, route }) => {
-    const navigate = useNavigate()
-
+const MenuButton = ({ name, icon: Icon, onClick }) => {
     return (
-        <button onClick={() => navigate(route)} className="menu-button">
+        <button onClick={onClick} className="menu-button">
             <Icon />
             <span>{name}</span>
         </button>
-    )
-}
+    );
+};
 
 export default MenuButton;

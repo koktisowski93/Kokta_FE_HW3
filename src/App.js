@@ -1,19 +1,18 @@
-import './App.css';
-import { Routes, Route } from "react-router-dom";
-import Owned from "./Pages/Owned";
-import Create from "./Pages/Create";
-import Invited from "./Pages/Invited";
-import Archived from "./Pages/Archived";
+import { useState } from 'react';
+import Header from './Components/Header';
+import MenuBar from './Components/MenuBar';
+import ListOfLists from './Components/ListOfLists';
 
-function App() {
+const App = () => {
+    const [view, setView] = useState("owned");
+
     return (
-        <Routes>
-            <Route path="/" element={<Owned />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/invited" element={<Invited />} />
-            <Route path="/archived" element={<Archived />} />
-        </Routes>
+        <div className="app">
+            <Header />
+            <ListOfLists view={view} />
+            <MenuBar setView={setView} />
+        </div>
     );
-}
+};
 
 export default App;
