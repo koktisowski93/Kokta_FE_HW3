@@ -1,0 +1,32 @@
+.shopping-list-detail {
+    max-width: 1300px;
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5rem;
+}
+
+.list-header svg:hover {
+    cursor: pointer;
+}
+
+.list-title {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.add-section {
+    display: flex;
+    padding: 0 10px;
+    justify-content:space-between;
+}
+
+.add-product svg:hover {
+    cursor: pointer;
+}

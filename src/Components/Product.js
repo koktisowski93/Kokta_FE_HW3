@@ -1,6 +1,6 @@
 import React from "react";
 import { TiDeleteOutline } from "react-icons/ti";
-import "./Product.css";
+import "../Design/Product.css";
 
 export const Product = ({ name, solved, handleChangeSolve, handleChangeRemove }) => {
   return (

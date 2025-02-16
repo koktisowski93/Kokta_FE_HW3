@@ -6,7 +6,16 @@ article.shopping-list-preview {
     margin: 0 auto 2rem;
     box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.75);
     padding: .5rem 4rem;
+    border-radius: 10px;
+    background-color: #ececec;
 }
+
+@media (max-width: 600px) {
+    article.shopping-list-preview {
+        margin: 0 .75rem 2rem;
+    }
+}
+
 article.shopping-list-preview:hover {
     cursor: pointer;
 }

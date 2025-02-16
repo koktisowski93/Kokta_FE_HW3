@@ -1,6 +1,6 @@
 
 import {AccessTime, PersonAddAlt, Delete, DoDisturb} from "@mui/icons-material";
-import "./ShoppingListPreview.css"
+import "../Design/ShoppingListPreview.css"
 import { useNavigate } from "react-router-dom";
 
 const getLabel = (mode, data, role) => {

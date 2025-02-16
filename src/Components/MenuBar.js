@@ -4,7 +4,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import PersonIcon from '@mui/icons-material/Person';
 import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 import InventoryIcon from '@mui/icons-material/Inventory';
-import './MenuBar.css'
+import '../Design/MenuBar.css'
 
 const MenuBar = ({ openAddModal, setMode, mode }) => {
 

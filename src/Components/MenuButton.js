@@ -1,5 +1,5 @@
 import React from 'react';
-import './MenuButton.css';
+import '../Design/MenuButton.css';
 import { useNavigate } from "react-router-dom";
 
 const MenuButton = ({ name, icon: Icon, onClick, isPicked=false }) => {

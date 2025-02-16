@@ -6,6 +6,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { MembersModal } from "../Components/MembersModal";
 import {useRole} from "../Components/RoleContext";
 import { useSearchParams } from "react-router-dom";
+import '../Design/ShoppingListDetail.css'
 
 const ShoppingListDetail = ({updateProductShoppingList, shoppingListProp }) => {
     const { role } = useRole();

@@ -3,6 +3,7 @@ import {ShoppingListPreview} from "../Components/ShoppingListPreview";
 import {useState} from "react";
 import AddMemberModal from "../Components/AddMemberModal";
 import ConfirmationModal from "../Components/ConfirmationModal";
+import '../Design/List.css'
 
 export const List = ({mode, shoppingListProp, setShoppingListMock}) => {
     const { role } = useRole();
@@ -90,7 +91,7 @@ export const List = ({mode, shoppingListProp, setShoppingListMock}) => {
 
 
     return (
-        <section>
+        <section className={'list-of-previews'}>
             {
                 shoppingListArray.map((item) => {
                     return <ShoppingListPreview

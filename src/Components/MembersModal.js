@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { CiCircleMinus } from "react-icons/ci";
-import "./MembersModal.css";
+import "../Design/MembersModal.css";
 
 export const MembersModal = ({ owner, members, onClose, onRemoveMember }) => {
   return (

@@ -8,11 +8,11 @@ export const shoppingListMockInitial = [
             { id: "32", name: "houby", solved: true },
         ],
         members: [
-            { name: "Uzivatel7", id: "21" },
-            { name: "Uzivatel2", id: "27" },
-            { name: "Uzivatel3", id: "29" },
+            { name: "Uzivatel7"},
+            { name: "Uzivatel2"},
+            { name: "Uzivatel3"},
         ],
-        owner: { name: "Uzivatel1", id: "22" },
+        owner: { name: "Uzivatel1",},
         archived: false
     },
     {
@@ -24,11 +24,11 @@ export const shoppingListMockInitial = [
             { id: "32", name: "houby", solved: true },
         ],
         members: [
-            { name: "Uzivatel7", id: "21" },
-            { name: "Uzivatel2", id: "27" },
-            { name: "Uzivatel3", id: "29" },
+            { name: "Uzivatel7"},
+            { name: "Uzivatel2"},
+            { name: "Uzivatel3"},
         ],
-        owner: { name: "Uzivatel1", id: "22" },
+        owner: { name: "Uzivatel1"},
         archived: false
     },
     {
@@ -40,11 +40,11 @@ export const shoppingListMockInitial = [
             { id: "32", name: "houby", solved: true },
         ],
         members: [
-            { name: "Uzivatel7", id: "21" },
-            { name: "Uzivatel2", id: "27" },
-            { name: "Uzivatel3", id: "29" },
+            { name: "Uzivatel7"},
+            { name: "Uzivatel2"},
+            { name: "Uzivatel3"},
         ],
-        owner: { name: "Uzivatel1", id: "22" },
+        owner: { name: "Uzivatel1"},
         archived: true
     },
     {
@@ -56,11 +56,11 @@ export const shoppingListMockInitial = [
             { id: "32", name: "houby", solved: true },
         ],
         members: [
-            { name: "Uzivatel7", id: "21" },
-            { name: "Uzivatel1", id: "27" },
-            { name: "Uzivatel3", id: "29" },
+            { name: "Uzivatel7"},
+            { name: "Uzivatel1"},
+            { name: "Uzivatel3"},
         ],
-        owner: { name: "Uzivatel2", id: "22" },
+        owner: { name: "Uzivatel2"},
         archived: false
     },
     {
@@ -72,11 +72,11 @@ export const shoppingListMockInitial = [
             { id: "32", name: "houby", solved: true },
         ],
         members: [
-            { name: "Uzivatel7", id: "21" },
-            { name: "Uzivatel2", id: "27" },
-            { name: "Uzivatel1", id: "29" },
+            { name: "Uzivatel7" },
+            { name: "Uzivatel2"},
+            { name: "Uzivatel1"},
         ],
-        owner: { name: "Uzivatel3", id: "22" },
+        owner: { name: "Uzivatel3"},
         archived: false
     }
 ];
