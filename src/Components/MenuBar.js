@@ -6,14 +6,14 @@ import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility
 import InventoryIcon from '@mui/icons-material/Inventory';
 import './MenuBar.css'
 
-const MenuBar = ({ setView }) => { // setView přijímáme jako prop
+const MenuBar = ({ openAddModal, setMode, mode }) => {
 
     return (
         <div className="menu-bar">
-            <MenuButton name="Přidat" icon={AddCircleIcon} onClick={() => setView("create")} />
-            <MenuButton name="Owned" icon={PersonIcon} onClick={() => setView("owned")} />
-            <MenuButton name="Invited" icon={SettingsAccessibilityIcon} onClick={() => setView("invited")} />
-            <MenuButton name="Archived" icon={InventoryIcon} onClick={() => setView("archived")} />
+            <MenuButton name="Přidat" icon={AddCircleIcon} onClick={openAddModal} />
+            <MenuButton name="Owned" icon={PersonIcon} onClick={() => setMode(1)} isPicked={mode === 1} />
+            <MenuButton name="Invited" icon={SettingsAccessibilityIcon} onClick={() => setMode(2)}  isPicked={mode === 2} />
+            <MenuButton name="Archived" icon={InventoryIcon} onClick={() => setMode(3)} isPicked={mode === 3}  />
         </div>
     );
 };

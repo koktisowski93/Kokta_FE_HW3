@@ -1,17 +1,59 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { RoleProvider } from './Components/RoleContext';
 import Header from './Components/Header';
 import MenuBar from './Components/MenuBar';
-import ListOfLists from './Components/ListOfLists';
+import {List} from './routes/List';
+import React, {useState} from "react";
+import ShoppingListDetail from "./routes/ShoppingListDetail";
+import {shoppingListMockInitial} from './mockupData/data.js'
+import AddShoppingListModal from "./Components/AddShoppingListModal";
 
 const App = () => {
-    const [view, setView] = useState("owned");
+    const [shoppingListMock, setShoppingListMock] = useState(shoppingListMockInitial);
+    const [mode, setMode] = useState(1);
+
+    const updateProductShoppingList = (roleProp, updatedProducts) => {
+        setShoppingListMock(prev => {
+            return prev.map((item) => {
+                if (item.owner.name === roleProp) {
+                    return {
+                        ...item,
+                        products: updatedProducts
+                    }
+                } else return item
+            })
+        })
+    };
+
+    console.log('shoppingListMock: ', shoppingListMock)
+
+
+
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
     return (
-        <div className="app">
-            <Header />
-            <ListOfLists view={view} />
-            <MenuBar setView={setView} />
-        </div>
+        <RoleProvider>
+            <Router>
+                <div className="app">
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<List mode={mode} shoppingListProp={shoppingListMock} setShoppingListMock={setShoppingListMock} />} />
+                        <Route path="/detail" element={
+                            <ShoppingListDetail
+                                shoppingListProp={shoppingListMock}
+                            updateProductShoppingList={updateProductShoppingList}
+                        />
+                        } />
+                    </Routes>
+                    <MenuBar openAddModal={()=>setIsAddModalOpen(true)} setMode={setMode} mode={mode} setShoppingListMock={setShoppingListMock}/>
+                    {
+                        isAddModalOpen && (
+                            <AddShoppingListModal onClose={()=>setIsAddModalOpen(false)} setShoppingListMock={setShoppingListMock}/>
+                        )
+                    }
+                </div>
+            </Router>
+        </RoleProvider>
     );
 };
 

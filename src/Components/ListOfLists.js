@@ -1,9 +1,9 @@
 import ShoppingList from './ShoppingList';
 
 const ListOfLists = () => {
-        return (
-            <ShoppingList />
-        )
-    }
+    return (
+        <ShoppingList/>
+    )
+}
 
-    export default ListOfLists;
+export default ListOfLists
